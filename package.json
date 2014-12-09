@@ -1,0 +1,40 @@
+{
+  "name": "privatize",
+  "version": "1.0.1",
+  "author": "Mikhail Davydov <i@azproduction.ru>",
+  "description": "Marks object properties as private",
+  "contributors": [
+    {
+      "name": "Mikhail Davydov",
+      "email": "i@azproduction.ru"
+    }
+  ],
+  "keywords": [
+    "private",
+    "property",
+    "privatize"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/azproduction/privatize.git"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jshint": "2.1.3",
+    "mocha": "~1.11.0",
+    "jscs": "~1.4.5",
+    "istanbul": "~0.2.11",
+    "chai": "*",
+    "coveralls": "*",
+    "husky": "~0.5.1"
+  },
+  "scripts": {
+    "test": "jshint . && jscs . && mocha -R spec",
+    "coverage": "istanbul cover node_modules/.bin/_mocha --report html -- -R spec",
+    "precommit": "npm test",
+    "prepush": "npm test"
+  }
+}
